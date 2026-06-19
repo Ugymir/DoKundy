@@ -1,26 +1,214 @@
 @import "tailwindcss";
 
+@theme {
+  /* Noční etapa — viz DESIGN.md */
+  --color-bg: oklch(0.14 0.018 230);
+  --color-surface: oklch(0.185 0.02 230);
+  --color-raised: oklch(0.24 0.024 230);
+  --color-line: oklch(0.32 0.025 230);
+  --color-ink: oklch(0.965 0.008 210);
+  --color-muted: oklch(0.78 0.02 215);
+  --color-primary: oklch(0.75 0.08 200);
+  --color-accent: oklch(0.85 0.14 90);
+  --color-accent-ink: oklch(0.2 0.03 250);
+  --color-land: oklch(0.205 0.02 230);
+  --color-sea: oklch(0.122 0.018 235);
+  --color-route-innsbruck: oklch(0.75 0.08 200);
+  --color-route-zadar: oklch(0.73 0.13 35);
+  --color-route-benatky: oklch(0.76 0.1 150);
+  --color-route-kunda: oklch(0.85 0.14 90);
+
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", sans-serif;
+  --font-body: var(--font-barlow), system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --z-nav: 30;
+  --z-backdrop: 40;
+  --z-modal: 50;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-accent-ink);
+}
+
+/* ---------- Mapa: trasy ---------- */
+
+.route {
+  cursor: pointer;
+}
+
+.route:focus-visible {
+  outline: none;
+}
+
+.route-line,
+.route-endpoint {
+  transition:
+    stroke-width 0.2s ease-out,
+    opacity 0.2s ease-out,
+    filter 0.2s ease-out;
+}
+
+.route[data-hot="true"] .route-line {
+  stroke-width: 4.5px;
+  filter: drop-shadow(0 0 7px currentColor);
+}
+
+.route[data-hot="true"] .route-endpoint {
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.route:focus-visible .route-line {
+  stroke-width: 4.5px;
+  filter: drop-shadow(0 0 7px currentColor);
+}
+
+.route:focus-visible .route-endpoint {
+  stroke: var(--color-ink);
+  stroke-width: 2.5px;
+}
+
+.route-waypoints {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.route[data-hot="true"] .route-waypoints,
+.route:focus-visible .route-waypoints {
+  opacity: 0.9;
+}
+
+/* Když je jedna trasa aktivní, ostatní ustoupí */
+.map-has-hot .route[data-hot="false"] .route-line,
+.map-has-hot .route[data-hot="false"] .route-endpoint {
+  opacity: 0.35;
+}
+
+.map-has-hot .route[data-hot="false"] .route-label {
+  opacity: 0.4;
+}
+
+.route-label {
+  transition: opacity 0.2s ease-out;
+}
+
+/* ---------- Animace (jen bez prefers-reduced-motion) ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .route-draw {
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: 1;
+    animation: route-draw 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--draw-delay, 0.25s);
+  }
+
+  .route-march {
+    animation: route-march 16s linear infinite;
+  }
+
+  .hero-rise {
+    opacity: 0;
+    translate: 0 14px;
+    animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--rise-delay, 0s);
+  }
+
+  .home-pulse {
+    animation: home-pulse 3.2s ease-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  dialog[open] {
+    animation: modal-in 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  dialog[open]::backdrop {
+    animation: backdrop-in 0.22s ease-out;
+  }
+}
+
+@keyframes route-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes route-march {
+  to {
+    stroke-dashoffset: -220;
+  }
+}
+
+@keyframes hero-rise {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes home-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.4);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(8px);
+  }
+}
+
+@keyframes backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---------- Modal ---------- */
+
+dialog::backdrop {
+  background: oklch(0.1 0.02 235 / 0.7);
+  backdrop-filter: blur(5px);
 }
