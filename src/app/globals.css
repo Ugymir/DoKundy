@@ -68,6 +68,10 @@ p {
   cursor: pointer;
 }
 
+/* Žádný obrys kolem trasy — po zavření detailu (hlavně na mobilu) se sem
+   vrací fokus a prohlížeč jinak vykreslí čtverec kolem celé čáry.
+   Klávesová viditelnost fokusu je zajištěná zvýrazněním čáry níže. */
+.route:focus,
 .route:focus-visible {
   outline: none;
 }

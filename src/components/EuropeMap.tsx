@@ -22,7 +22,8 @@ type EndpointLabel = {
 
 // Umístění popisků cílů tak, aby se nepřekrývaly s trasami
 const ENDPOINTS: EndpointLabel[] = [
-  { tripId: "innsbruck", city: "innsbruck", dx: -2, dy: 36, anchor: "middle" },
+  // Zarovnáno doprava a posunuto vlevo od bodu, aby popisek nepřekrýval trasu do Benátek
+  { tripId: "innsbruck", city: "innsbruck", dx: -8, dy: 36, anchor: "end" },
   { tripId: "zadar", city: "zadar", dx: 18, dy: 8, anchor: "start" },
   { tripId: "benatky", city: "benatky", dx: -18, dy: 10, anchor: "end" },
   { tripId: "kunda", city: "kunda", dx: 20, dy: 8, anchor: "start" },

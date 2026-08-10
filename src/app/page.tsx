@@ -19,7 +19,11 @@ export default function Home() {
                 Jsme parta kamarádů z Vysočiny. Poprvé jsme na cestu vyrazili
                 v osmnácti — s plnými brašnami, nulovými zkušenostmi a sedmi dny
                 šlapání bez jediné pauzy. Od té doby je to každé léto stejné:
-                naložit kola, vyjet z domova a dojet dál než loni.
+                naložit kola, vyjet z domova a dojet dál než loni. Jsme studenti,
+                Pavel a Lukáš jsou stálými členy, třetí místo se již čtvrtým rokem
+                střídá. První rok s námi jel Maty do Innsbrucku, druhý rok Vojta do Zadaru,
+                třetí Kuba do Benátek a letos Honza, který už má studentská léta za sebou,
+                pojede do Varšavy s Lukášem.
               </p>
               <p>
                 Nejsme závodníci. Spíme, kde se dá, vaříme na vařiči u cesty,
@@ -29,16 +33,38 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <figure className="overflow-hidden rounded-xl">
-            <Image
-              src="/photos/zadar/oprava-dusi.jpg"
-              width={1080}
-              height={923}
-              alt="Selfie u silnice: jeden drží kolo za výplet, druhý ukazuje palec nahoru — oprava píchlé duše cestou do Zadaru"
-              sizes="(max-width: 1024px) 92vw, 38vw"
-              className="h-auto w-full"
-            />
-          </figure>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <figure className="col-span-2 aspect-[16/10] overflow-hidden rounded-xl">
+              <Image
+                src="/photos/zadar/oprava-dusi.jpg"
+                width={1080}
+                height={923}
+                alt="Selfie u silnice: jeden drží kolo za výplet, druhý ukazuje palec nahoru — oprava píchlé duše cestou do Zadaru"
+                sizes="(max-width: 1024px) 92vw, 40vw"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <figure className="aspect-[4/5] overflow-hidden rounded-xl">
+              <Image
+                src="/photos/venice/parta-dolomity.jpg"
+                width={1080}
+                height={1604}
+                alt="Tři kluci z party v cyklistických dresech před panoramatem Dolomit nad horským městečkem"
+                sizes="(max-width: 1024px) 46vw, 19vw"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <figure className="aspect-[4/5] overflow-hidden rounded-xl">
+              <Image
+                src="/photos/innsbruck/parta-vrchol.jpg"
+                width={1080}
+                height={1066}
+                alt="Tři členové party na vrcholu u zlaté vrcholové tyče polepené samolepkami, kolem zasněžené štíty"
+                sizes="(max-width: 1024px) 46vw, 19vw"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+          </div>
         </div>
       </section>
 

@@ -4,18 +4,22 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+// display: "optional" = žádný záblesk fontu při prvním načtení (viz fix.txt).
+// Prohlížeč krátce (~100 ms) počká na náš font; když se nestihne, použije
+// metricky sladěnou náhradu a už ji nepřepíná (žádný „blik“ ani skok layoutu).
+// latin-ext je nutný kvůli českým znakům (č, ř, ž, ě, ů…).
 const barlow = Barlow({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
   variable: "--font-barlow",
-  display: "swap",
+  display: "optional",
 });
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700"],
+  weight: ["600", "700"], // 500 se v nadpisech nikde nepoužívá
   variable: "--font-barlow-condensed",
-  display: "swap",
+  display: "optional",
 });
 
 export const metadata: Metadata = {
