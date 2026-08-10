@@ -17,13 +17,10 @@ export default function Home() {
             <div className="mt-6 max-w-[62ch] space-y-4 text-lg leading-relaxed">
               <p>
                 Jsme parta kamarádů z Vysočiny. Poprvé jsme na cestu vyrazili
-                v osmnácti — s plnými brašnami, nulovými zkušenostmi a sedmi dny
-                šlapání bez jediné pauzy. Od té doby je to každé léto stejné:
-                naložit kola, vyjet z domova a dojet dál než loni. Jsme studenti,
-                Pavel a Lukáš jsou stálými členy, třetí místo se již čtvrtým rokem
+                v osmnácti. Od té doby je to každé léto stejné:
+                naložit kola, vyjet z domova a dojet dál než loni. Pavel a Lukáš jsou stálými členy, třetí místo se již čtvrtým rokem
                 střídá. První rok s námi jel Maty do Innsbrucku, druhý rok Vojta do Zadaru,
-                třetí Kuba do Benátek a letos Honza, který už má studentská léta za sebou,
-                pojede do Varšavy s Lukášem.
+                třetí Kuba do Benátek a letos Honza pojede do Varšavy s Lukášem.
               </p>
               <p>
                 Nejsme závodníci. Spíme, kde se dá, vaříme na vařiči u cesty,
@@ -31,6 +28,73 @@ export default function Home() {
                 nás zrovna zastihnou. Kilometry si ale počítáme poctivě — zatím
                 jich je 2 430. A v létě 2026 by se měly skoro zdvojnásobit.
               </p>
+            </div>
+
+            <div className="mt-8 space-y-5">
+              <div>
+                <p className="text-sm text-muted">
+                  Naší cestu budem dokumentovat zde:
+                </p>
+                <div className="mt-2.5 flex flex-wrap gap-3">
+                  <a
+                    href="https://www.instagram.com/cyklohomeless"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram @cyklohomeless (otevře se v novém okně)"
+                    className="inline-flex items-center gap-2 rounded-lg border border-line/60 px-4 py-2.5 font-medium text-muted transition-colors duration-200 hover:bg-raised hover:text-ink"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="ig-gradient" x1="0" y1="1" x2="1" y2="0">
+                          <stop offset="0" stopColor="#feda75" />
+                          <stop offset="0.25" stopColor="#fa7e1e" />
+                          <stop offset="0.5" stopColor="#d62976" />
+                          <stop offset="0.75" stopColor="#962fbf" />
+                          <stop offset="1" stopColor="#4f5bd5" />
+                        </linearGradient>
+                      </defs>
+                      <g stroke="url(#ig-gradient)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </g>
+                    </svg>
+                    @cyklohomeless
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <p className="text-sm text-muted">
+                  Naše sportovní výkony/nevýkony budeme zaznamenávat zde:
+                </p>
+                <div className="mt-2.5 flex flex-wrap gap-3">
+                  <a
+                    href="https://strava.app.link/KGvaW2Eiu5b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Strava – Lukáš (otevře se v novém okně)"
+                    className="inline-flex items-center gap-2 rounded-lg border border-line/60 px-4 py-2.5 font-medium text-muted transition-colors duration-200 hover:bg-raised hover:text-ink"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FC4C02" aria-hidden="true">
+                      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+                    </svg>
+                    Lukáš
+                  </a>
+                  <a
+                    href="https://strava.app.link/ELh3q2Liu5b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Strava – Pavel (otevře se v novém okně)"
+                    className="inline-flex items-center gap-2 rounded-lg border border-line/60 px-4 py-2.5 font-medium text-muted transition-colors duration-200 hover:bg-raised hover:text-ink"
+                  >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#FC4C02" aria-hidden="true">
+                      <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169" />
+                    </svg>
+                    Pavel
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
