@@ -23,6 +23,7 @@ export default function TripSection({ trip, flip, priority, onOpen }: Props) {
             height={main.height}
             alt={main.alt}
             priority={priority}
+            style={main.position ? { objectPosition: main.position } : undefined}
             sizes="(max-width: 1024px) 92vw, 44vw"
             className={`h-auto w-full ${planned ? "" : "max-h-[34rem] object-cover"}`}
           />

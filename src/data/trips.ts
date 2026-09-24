@@ -3,6 +3,8 @@ export type TripPhoto = {
   width: number;
   height: number;
   alt: string;
+  /** CSS object-position pro oříznutí hlavní fotky, např. „top“ */
+  position?: string;
 };
 
 export type Trip = {
@@ -79,9 +81,9 @@ export const trips: Trip[] = [
     km: "1 050 km",
     daysLine: "11 dní v sedle · 15 dní celkem",
     teaser:
-      "Zatím nejdelší cesta — k Jadranu. A domů letecky, s největšími krabicemi od kol, jaké kdy pražské letiště vidělo.",
+      "Tehdy naše nejdelší cesta — k Jadranu. A domů letecky, s největšími krabicemi od kol, jaké kdy pražské letiště vidělo.",
     story: [
-      "Naše zatím nejdelší cesta: 1 050 kilometrů z Vysočiny až k Jadranu. Přes Znojmo a Vídeň do Maďarska — v Sárváru jsme se zastavili vykoupat v lázních — a dál přes Graz, Maribor a Záhřeb k Plitvickým jezerům a do Zadaru. Jedenáct dní v sedle, patnáct dní celkem: den volna v Záhřebu a tři dny u moře.",
+      "Tehdy naše nejdelší cesta: 1 050 kilometrů z Vysočiny až k Jadranu. Přes Znojmo a Vídeň do Maďarska — v Sárváru jsme se zastavili vykoupat v lázních — a dál přes Graz, Maribor a Záhřeb k Plitvickým jezerům a do Zadaru. Jedenáct dní v sedle, patnáct dní celkem: den volna v Záhřebu a tři dny u moře.",
       "A poprvé jsme letěli domů s koly v krabicích. Do servisu v Zadaru jsme psali s půlročním předstihem, aby nám nějaké krabice schovali. Schovali — ale takové, že specialista na nadrozměrná zavazadla na pražském letišti prohlásil, že větší krabice od kol v životě neviděl.",
     ],
     route: [
@@ -208,21 +210,22 @@ export const trips: Trip[] = [
     title: "Do Kundy",
     destination: "Kunda",
     country: "Estonsko",
-    status: "planned",
-    km: "≈ 2 000 km",
-    daysLine: "≈ 25 dní na cestě · léto 2026",
+    status: "done",
+    km: "2 084 km",
+    daysLine: "19 dní v sedle · 24 dní celkem · den volna ve Varšavě a v Rize · 3 dny v Tallinnu",
     teaser:
-      "Hlavní cíl od začátku: 2 000 kilometrů na sever, do estonského městečka s nezapomenutelným jménem.",
+      "Hlavní cíl od samého začátku — a dojeli jsme. 2 084 kilometrů na sever, výměna posádky ve Varšavě a pro Lukáše tři dny ve vlaku kvůli průjmu.",
     story: [
-      "Hlavní cíl, ke kterému celou dobu míříme: dojet na kole do estonské Kundy. Městečko na pobřeží Finského zálivu, jehož jméno zní v češtině… no, řekněme zajímavě.",
-      "Čeká nás kolem 2 000 kilometrů a zhruba 25 dní na cestě — přes Polsko, Litvu a Lotyšsko podél Baltu až na sever Estonska. Bude to skoro dvakrát víc, než jsme kdy ujeli. Léto 2026. Držte nám palce.",
+      "Hlavní cíl, ke kterému jsme celou dobu mířili: dojet na kole z Vysočiny do estonské Kundy — městečka na pobřeží Finského zálivu, jehož jméno zní v češtině… no, řekněme zajímavě. Povedlo se. 2 084 kilometrů přes Polsko, Litvu a Lotyšsko až na sever Estonska a odtud ještě do Tallinnu. Skoro dvakrát víc, než jsme kdy ujeli. Devatenáct dní v sedle, 24 dní celkem: den volna ve Varšavě, další v Rize a na závěr tři dny v Tallinnu.",
+      "Letos to byla štafeta. Z Vysočiny vyrazil Lukáš s Honzou, který to s ním dotáhl až do Varšavy — 692 kilometrů. Tam ho vystřídal Pavel a s Lukášem pokračoval přes Pobaltí do Kundy a do Tallinnu. Na kontě má 1 381 kilometrů.",
+      "Lukáš měl v plánu ujet celou trasu sám. Plán mu nakonec nezhatily kopce ani počasí, ale průjem: kolem Varšavy ho skolil tak, že tři dny místo v sedle cestoval vlakem. Pak se vrátil na kolo a dojel to až do konce — i tak jich nasbíral 1 805, nejvíc ze všech.",
+      "V cíli nechyběla povinná fotka pod cedulí KUNDA. A kola? Ta zase skončila v krabicích — tentokrát v Tallinnu, pod věží Tlustá Markéta.",
     ],
     route: [
       "Vysočina",
-      "Adršpach",
-      "Vratislava",
+      "Vratislav",
       "Varšava",
-      "Kaunas",
+      "Vilnius",
       "Riga",
       "Kunda",
       "Tallinn",
@@ -230,9 +233,64 @@ export const trips: Trip[] = [
     photos: [
       {
         src: "/photos/kunda/kunda-cedule.jpg",
-        width: 2100,
-        height: 1182,
-        alt: "Modrá silniční cedule s nápisem Kunda u silnice v Estonsku",
+        width: 1029,
+        height: 1287,
+        alt: "Dva cyklisté bez triček s naloženými koly pod modrou cedulí KUNDA — dojeli jsme",
+        position: "top",
+      },
+      {
+        src: "/photos/kunda/tallinn-krabice.jpg",
+        width: 1080,
+        height: 977,
+        alt: "Mezi dvěma krabicemi od kol v Tallinnu, v pozadí věž Tlustá Markéta a kostel svatého Olafa",
+      },
+      {
+        src: "/photos/kunda/start-vysocina.jpg",
+        width: 1034,
+        height: 1293,
+        alt: "Dva cyklisté s naloženými koly na startu před budovou na Vysočině",
+      },
+      {
+        src: "/photos/kunda/reka-pri-zapadu.jpg",
+        width: 1026,
+        height: 1283,
+        alt: "Meandr řeky mezi lesy při západu slunce, pohled z vyhlídky",
+      },
+      {
+        src: "/photos/kunda/vyhled-na-mesto.jpg",
+        width: 1019,
+        height: 1286,
+        alt: "Výhled shora na město s řekou, mosty a výškovými budovami v Pobaltí",
+      },
+      {
+        src: "/photos/kunda/riga-nabrezi.jpg",
+        width: 1034,
+        height: 1293,
+        alt: "Dva cyklisté s koly na nábřeží Daugavy, za řekou věže staré Rigy",
+      },
+      {
+        src: "/photos/kunda/raseliniste-zapad.jpg",
+        width: 1014,
+        height: 1251,
+        alt: "Po koupání na dřevěném chodníku v rašeliništi při západu slunce, vedle opřené kolo",
+      },
+      {
+        src: "/photos/kunda/baltska-plaz.jpg",
+        width: 1027,
+        height: 1284,
+        alt: "Prázdná písečná pláž u Baltského moře při oranžovém západu slunce",
+      },
+      {
+        src: "/photos/kunda/lesni-vodopad.jpg",
+        width: 988,
+        height: 1235,
+        alt: "Peřeje a nízký vodopád na tmavé řece v hustém lese",
+      },
+      {
+        src: "/photos/kunda/vodopad-s-kolem.jpg",
+        width: 1018,
+        height: 1283,
+        alt: "Cyklista s kolem brodí řeku kousek nad hranou širokého vodopádu v Estonsku",
       },
     ],
     colorVar: "--color-route-kunda",

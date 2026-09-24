@@ -18,22 +18,24 @@ export default function Home() {
               <p>
                 Jsme parta kamarádů z Vysočiny. Poprvé jsme na cestu vyrazili
                 v osmnácti. Od té doby je to každé léto stejné:
-                naložit kola, vyjet z domova a dojet dál než loni. Pavel a Lukáš jsou stálými členy, třetí místo se již čtvrtým rokem
-                střídá. První rok s námi jel Maty do Innsbrucku, druhý rok Vojta do Zadaru,
-                třetí Kuba do Benátek a letos Honza pojede do Varšavy s Lukášem.
+                naložit kola, vyjet z domova a dojet dál než loni. Pavel a Lukáš jsou stálými členy, třetí místo se
+                každý rok střídá. První rok s námi jel Maty do Innsbrucku, druhý rok Vojta do Zadaru,
+                třetí Kuba do Benátek a letos Honza s Lukášem do Varšavy, kde
+                štafetu převzal Pavel a dojel s Lukášem až do Kundy.
               </p>
               <p>
                 Nejsme závodníci. Spíme, kde se dá, vaříme na vařiči u cesty,
                 fotíme cedule s divnými jmény a opravujeme píchlé duše tam, kde
-                nás zrovna zastihnou. Kilometry si ale počítáme poctivě — zatím
-                jich je 2 430. A v létě 2026 by se měly skoro zdvojnásobit.
+                nás zrovna zastihnou. Kilometry si ale počítáme poctivě — za
+                čtyři léta jich je 4 514 a necelou polovinu z nich jsme ujeli
+                letos cestou do Kundy.
               </p>
             </div>
 
             <div className="mt-8 space-y-5">
               <div>
                 <p className="text-sm text-muted">
-                  Naší cestu budem dokumentovat zde:
+                  Naše cesty dokumentujeme zde:
                 </p>
                 <div className="mt-2.5 flex flex-wrap gap-3">
                   <a
@@ -66,7 +68,7 @@ export default function Home() {
 
               <div>
                 <p className="text-sm text-muted">
-                  Naše sportovní výkony/nevýkony budeme zaznamenávat zde:
+                  Naše sportovní výkony/nevýkony zaznamenáváme zde:
                 </p>
                 <div className="mt-2.5 flex flex-wrap gap-3">
                   <a
@@ -139,8 +141,9 @@ export default function Home() {
             Přijďte si to poslechnout
           </h2>
           <p className="mx-auto mt-4 max-w-[55ch] text-lg text-muted">
-            Po návratu z Kundy vyrážíme vyprávět — o 2 000 kilometrech na sever,
-            o krabicích od kol i o tom, proč se nejhorší dny vyprávějí nejlíp.
+            Z Kundy jsme zpátky a vyrážíme vyprávět — o 2 084 kilometrech na
+            sever, o krabicích od kol, o průjmu u Varšavy i o tom, proč se
+            nejhorší dny vyprávějí nejlíp.
           </p>
           <Link
             href="/prednasky"

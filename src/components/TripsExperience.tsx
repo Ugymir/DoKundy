@@ -28,8 +28,10 @@ export default function TripsExperience() {
               style={{ "--rise-delay": "0.12s" } as React.CSSProperties}
             >
               Každé léto sedneme na kola a dojedeme o kus dál než loni — do
-              Innsbrucku, do Zadaru, do Benátek. V létě 2026 nás čeká největší
-              výzva: 2 000 kilometrů přes Polsko a Pobaltí do estonské Kundy.
+              Innsbrucku, do Zadaru, do Benátek. V létě 2026 jsme zvládli
+              největší výzvu: 2 084 kilometrů přes Polsko a Pobaltí do
+              estonské Kundy. Kromě Česka jsme na kole projeli už deset evropských
+              států.
             </p>
 
             {/* Legenda = spolehlivé ovládání mapy (hlavně na mobilu) */}
@@ -76,8 +78,8 @@ export default function TripsExperience() {
               className="hero-rise mt-4 text-sm text-muted"
               style={{ "--rise-delay": "0.32s" } as React.CSSProperties}
             >
-              Každá čára na mapě je jedno léto. Klikněte na ni — plná znamená
-              dokončeno, čárkovaná nás teprve čeká.
+              Každá čára na mapě je jedno léto. Klikněte na ni a otevře se
+              příběh i fotky z cesty.
             </p>
           </div>
 
@@ -88,9 +90,8 @@ export default function TripsExperience() {
               onSelect={setSelectedId}
             />
             <figcaption className="sr-only">
-              Mapa Evropy: tři dokončené trasy z Vysočiny (Innsbruck 2023, Zadar
-              2024, Benátky 2025) a čárkovaně plánovaná trasa do Kundy v
-              Estonsku (2026).
+              Mapa Evropy: čtyři dokončené trasy z Vysočiny (Innsbruck 2023, Zadar
+              2024, Benátky 2025 a Kunda v Estonsku 2026).
             </figcaption>
           </figure>
         </div>
@@ -103,8 +104,8 @@ export default function TripsExperience() {
             Naše cesty
           </h2>
           <p className="mt-3 max-w-[60ch] text-muted">
-            Čtyři léta, čtyři čáry na mapě. Tři už mají cílovou fotku, čtvrtá
-            zatím jen jméno, kterému se nedá odolat.
+            Čtyři léta, čtyři čáry na mapě — a všechny čtyři už mají cílovou
+            fotku.
           </p>
           <div className="mt-16 flex flex-col gap-24 lg:mt-20 lg:gap-32">
             {trips.map((trip, i) => (

@@ -4,7 +4,7 @@ import PrednaskyTable from "@/components/PrednaskyTable";
 export const metadata: Metadata = {
   title: "Přednášky",
   description:
-    "Termíny přednášek o našich cestách na kole napříč Evropou. Po návratu z Kundy doplníme data, místa i rezervace.",
+    "Termíny přednášek o našich cestách na kole napříč Evropou. Z Kundy jsme zpátky — data, místa i rezervace brzy doplníme.",
 };
 
 export default function PrednaskyPage() {

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s · Z Vysočiny do Kundy",
   },
   description:
-    "Každé léto sedáme na kola a jedeme z Vysočiny o kus dál — Innsbruck, Zadar, Benátky. V létě 2026 nás čeká 2 000 km do estonské Kundy. Příběhy, fotky a všechny trasy na jedné mapě Evropy.",
+    "Každé léto sedáme na kola a jedeme z Vysočiny o kus dál — Innsbruck, Zadar, Benátky a v létě 2026 i 2 084 km do estonské Kundy. Příběhy, fotky a všechny trasy na jedné mapě Evropy.",
   keywords: [
     "cykloturistika",
     "cesta na kole",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Z Vysočiny do Kundy",
     description:
-      "Tři léta, tři cesty na kole napříč Evropou — a v roce 2026 ta největší: 2 000 km do estonské Kundy.",
+      "Čtyři léta, čtyři cesty na kole napříč Evropou — a v roce 2026 ta největší: 2 084 km do estonské Kundy.",
     locale: "cs_CZ",
     type: "website",
   },

@@ -61,12 +61,16 @@ const graticulePath = path(geoGraticule().step([5, 5])());
 const CITIES = {
   domov: [15.59, 49.4], // Vysočina
   innsbruck: [11.39, 47.27],
+  mnichov: [11.58, 48.14], // München
   zadar: [15.23, 44.12],
   benatky: [12.34, 45.44],
   kunda: [26.53, 59.52],
   praha: [14.42, 50.09],
   wien: [16.37, 48.21],
   zagreb: [15.98, 45.81],
+  vratislav: [17.04, 51.11], // Wrocław
+  varsava: [21.01, 52.23], // Warszawa
+  vilnius: [25.28, 54.69],
   riga: [24.11, 56.95],
   tallinn: [24.75, 59.44],
 };
@@ -76,7 +80,7 @@ const ROUTES = {
     CITIES.domov,
     [13.5, 49.05], // Šumava
     [12.1, 48.6], // přes Bavorsko
-    [11.58, 48.14], // München
+    CITIES.mnichov,
     [10.75, 47.56], // Neuschwanstein
     [10.99, 47.42], // Zugspitze
     CITIES.innsbruck,
@@ -106,16 +110,11 @@ const ROUTES = {
   ],
   kunda: [
     CITIES.domov,
-    [17.25, 49.59], // Olomouc
-    [18.26, 49.82], // Ostrava
-    [19.12, 50.81], // Częstochowa
-    [19.46, 51.77], // Łódź
-    [19.7, 52.55], // Płock
-    [20.48, 53.78], // Olsztyn
-    [22.93, 54.1], // Suwałki
-    [23.9, 54.9], // Kaunas
+    CITIES.vratislav,
+    CITIES.varsava, // Warszawa
+    [22.93, 54.1], // Suwałki – mimo Bělorusko
+    CITIES.vilnius,
     [24.11, 56.95], // Riga
-    [24.5, 58.39], // Pärnu
     CITIES.kunda,
     [24.75, 59.44], // Tallinn
   ],

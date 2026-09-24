@@ -59,7 +59,7 @@ export default function PrednaskyTable() {
                     Zatím žádné termíny
                   </h2>
                   <p className="mx-auto mt-3 max-w-[52ch] text-muted">
-                    Po dokončení naší cesty do Kundy pro vás chystáme sérii
+                    Cestu do Kundy máme za sebou a chystáme pro vás sérii
                     přednášek. Termíny, místa a odkazy na rezervaci doplníme
                     sem. Už teď se můžete těšit!
                   </p>

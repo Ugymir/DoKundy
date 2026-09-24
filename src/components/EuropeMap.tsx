@@ -37,8 +37,12 @@ const CONTEXT_CITIES: {
   anchor: "start" | "middle" | "end";
 }[] = [
   { city: "praha", label: "Praha", dx: -12, dy: -10, anchor: "end" },
+  { city: "mnichov", label: "Mnichov", dx: -12, dy: -10, anchor: "end" },
   { city: "wien", label: "Vídeň", dx: 14, dy: 4, anchor: "start" },
   { city: "zagreb", label: "Záhřeb", dx: 16, dy: 4, anchor: "start" },
+  { city: "vratislav", label: "Vratislav", dx: 14, dy: 26, anchor: "start" },
+  { city: "varsava", label: "Varšava", dx: 14, dy: 4, anchor: "start" },
+  { city: "vilnius", label: "Vilnius", dx: 14, dy: 6, anchor: "start" },
   { city: "riga", label: "Riga", dx: 16, dy: 4, anchor: "start" },
   { city: "tallinn", label: "Tallinn", dx: -14, dy: -8, anchor: "end" },
 ];
@@ -54,7 +58,7 @@ export default function EuropeMap({ hoveredId, onHover, onSelect }: Props) {
     <svg
       viewBox={`0 0 ${MAP_W} ${MAP_H}`}
       role="group"
-      aria-label="Mapa Evropy se čtyřmi trasami z Vysočiny: do Innsbrucku (2023), do Zadaru (2024), do Benátek (2025) a plánovaná trasa do Kundy (2026)"
+      aria-label="Mapa Evropy se čtyřmi trasami z Vysočiny: do Innsbrucku (2023), do Zadaru (2024), do Benátek (2025) a do Kundy (2026)"
       className={`h-auto w-full ${hoveredId ? "map-has-hot" : ""}`}
     >
       <defs>
