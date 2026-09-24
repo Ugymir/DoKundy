@@ -232,7 +232,7 @@ export const trips: Trip[] = [
     ],
     photos: [
       {
-        src: "/photos/kunda/kunda-cedule.jpg",
+        src: "/photos/kunda/kunda-v-cili.jpg",
         width: 1029,
         height: 1287,
         alt: "Dva cyklisté bez triček s naloženými koly pod modrou cedulí KUNDA — dojeli jsme",

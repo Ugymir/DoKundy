@@ -23,6 +23,7 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cyklohomeless.cz"),
   title: {
     default: "Z Vysočiny do Kundy · Naše cesty na kole Evropou",
     template: "%s · Z Vysočiny do Kundy",

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Přednášky",
   description:
     "Termíny přednášek o našich cestách na kole napříč Evropou. Z Kundy jsme zpátky — data, místa i rezervace brzy doplníme.",
+  alternates: { canonical: "/prednasky" },
 };
 
 export default function PrednaskyPage() {
