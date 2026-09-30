@@ -214,11 +214,11 @@ export const trips: Trip[] = [
     km: "2 084 km",
     daysLine: "19 dní v sedle · 24 dní celkem · den volna ve Varšavě a v Rize · 3 dny v Tallinnu",
     teaser:
-      "Hlavní cíl od samého začátku — a dojeli jsme. 2 084 kilometrů na sever, výměna posádky ve Varšavě a pro Lukáše tři dny ve vlaku kvůli průjmu.",
+      "Hlavní cíl od samého začátku — a dojeli jsme. 2 084 kilometrů na sever, výměna posádky ve Varšavě a pro Lukáše tři dny ve vlaku kvůli střevním potížím.",
     story: [
       "Hlavní cíl, ke kterému jsme celou dobu mířili: dojet na kole z Vysočiny do estonské Kundy — městečka na pobřeží Finského zálivu, jehož jméno zní v češtině… no, řekněme zajímavě. Povedlo se. 2 084 kilometrů přes Polsko, Litvu a Lotyšsko až na sever Estonska a odtud ještě do Tallinnu. Skoro dvakrát víc, než jsme kdy ujeli. Devatenáct dní v sedle, 24 dní celkem: den volna ve Varšavě, další v Rize a na závěr tři dny v Tallinnu.",
       "Letos to byla štafeta. Z Vysočiny vyrazil Lukáš s Honzou, který to s ním dotáhl až do Varšavy — 692 kilometrů. Tam ho vystřídal Pavel a s Lukášem pokračoval přes Pobaltí do Kundy a do Tallinnu. Na kontě má 1 381 kilometrů.",
-      "Lukáš měl v plánu ujet celou trasu sám. Plán mu nakonec nezhatily kopce ani počasí, ale průjem: kolem Varšavy ho skolil tak, že tři dny místo v sedle cestoval vlakem. Pak se vrátil na kolo a dojel to až do konce — i tak jich nasbíral 1 805, nejvíc ze všech.",
+      "Lukáš měl v plánu ujet celou trasu sám. Plán mu nakonec nezhatily kopce ani počasí, ale střevní potíže: kolem Varšavy ho skolily tak, že tři dny místo v sedle cestoval vlakem. Pak se vrátil na kolo a dojel to až do konce — i tak jich nasbíral 1 805, nejvíc ze všech.",
       "V cíli nechyběla povinná fotka pod cedulí KUNDA. A kola? Ta zase skončila v krabicích — tentokrát v Tallinnu, pod věží Tlustá Markéta.",
     ],
     route: [
