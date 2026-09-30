@@ -147,7 +147,7 @@ export default function Home() {
           </h2>
           <p className="mx-auto mt-4 max-w-[55ch] text-lg text-muted">
             Z Kundy jsme zpátky a vyrážíme vyprávět — o 2 084 kilometrech na
-            sever, o krabicích od kol, o střevních potížích u Varšavy i o tom, proč se
+            sever, o krabicích od kol i o tom, proč se
             nejhorší dny vyprávějí nejlíp.
           </p>
           <Link
